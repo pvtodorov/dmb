@@ -1,0 +1,14 @@
+#set optional R environment variables
+#mostly for setting up environment variables
+#read more at https://rstats.wtf/r-startup.html
+
+#pointing the TMPDIR to scratch speeds up temp file IO
+#make sure that the directory exists and you have write access!
+TMPDIR="/scratch/nmq407/R_tmp/"
+PROJECT_DIR="/projects/petar/dmb/"
+R_ENVIRON_USER="/projects/petar/dmb/.Renviron"
+R_PROFILE_USER="/projects/petar/dmb/.Rprofile"
+MC_CORES=1
+OPENBLAS_NUM_THREADS=1
+OMP_NUM_THREADS=1
+MKL_NUM_THREADS=1
