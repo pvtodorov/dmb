@@ -1,0 +1,674 @@
+BCL to FASTQ file converter
+bcl2fastq v2.20.0.422
+Copyright (c) 2007-2017 Illumina, Inc.
+
+2023-05-27 00:17:34 [7efce3d947c0] Command-line invocation: bcl2fastq --runfolder-dir ../data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX --output-dir ../data/01_fastq/0038 --sample-sheet=sample_sheets/sample_0038_scop_17_first20.csv --no-lane-splitting -r 30 -p 30 -w 30 
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Minimum log level: INFO
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Sample sheet: 'sample_sheets/sample_0038_scop_17_first20.csv'
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Runfolder path: '../data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX'
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Input path: '../data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX/Data/Intensities/BaseCalls/'
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Intensities path: '../data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX/Data/Intensities/'
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Output path: '../data/01_fastq/0038'
+2023-05-27 00:17:34 [7efce3d947c0] INFO: InterOp path: '../data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX/InterOp/'
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Stats path: '../data/01_fastq/0038/Stats/'
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Reports path: '../data/01_fastq/0038/Reports/'
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Detected CPUs: 128
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Loading threads: 30
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Processing threads: 30
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Writing threads: 30
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Allowed barcode mismatches: 1 
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Tiles: <ALL>
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Minimum trimmed read length: 35
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Use bases masks: <NONE>
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Mask short adapter reads: 22
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Adapter stringency: 0.9
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Adapter trimming method: Allow matches with indels
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Ignore missing BCLs: NO
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Ignore missing filters: NO
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Ignore missing positions: NO
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Ignore missing controls: NO
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Include non-PF clusters: NO
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Create FASTQs for index reads: NO
+2023-05-27 00:17:34 [7efce3d947c0] INFO: Use bgzf compression for FASTQ files: YES
+2023-05-27 00:17:34 [7efce3d947c0] INFO: FASTQ compression level: 4
+2023-05-27 00:17:34 [7efce3d947c0] INFO: RunInfo.xml: '"../data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX/RunInfo.xml"'
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Lane: 1
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Mask: 
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #0 'unknown' 'Undetermined' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #1 '1' '144_1_HIPL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TTACCGAC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #2 '2' '145_1_Hyp_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'AGTGACCT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #3 '3' '143_4_SCL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TCGGATTC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #4 '4' '144_4_ICL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CAAGGTAC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #5 '5' '145_4_ZIL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TCCTCATG'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #6 '6' '142_4_HIPL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'GTCAGTCA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #7 '7' '143_2_ZIL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CGAATACG'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #8 '8' '145_2_HIPL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TCTAGGAG'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #9 '9' '143_1_HIPL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CGCAACTA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #10 '10' '144_5_Hyp_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CGTATCTC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #11 '11' '144_2_ZIL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'GTACACCT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #12 '12' '143_5_Hyp_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CGGCATTA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #13 '13' '143_3_SCL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TCGTCTGA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #14 '14' '143_5_SCL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'AGCCTATC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #15 '15' '144_4_HIPL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CTGTACCA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #16 '16' '142_4_SCL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'AGACCTTG'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #17 '17' '145_5_Hyp_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'AGGATAGC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #18 '18' '143_4_ZIL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CCTTCCAT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #19 '19' '142_2_Hyp_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'GTCCTTGA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #20 '20' '142_3_ZIL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TGCGTAAC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #21 '21' '142_2_SCL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CACAGACT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #22 '22' '145_3_ICL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TTACGTGC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #23 '23' '145_2_ICL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CCAAGGTT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #24 '24' '144_2_ICL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CACGCAAT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Read: 1 data read
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Cycles: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Read: 1 index read
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Cycles: 62,63,64,65,66,67,68,69
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Read: 2 data read
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Cycles: 70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Lane: 2
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Mask: 
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #0 'unknown' 'Undetermined' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #1 '1' '144_1_HIPL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TTACCGAC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #2 '2' '145_1_Hyp_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'AGTGACCT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #3 '3' '143_4_SCL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TCGGATTC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #4 '4' '144_4_ICL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CAAGGTAC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #5 '5' '145_4_ZIL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TCCTCATG'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #6 '6' '142_4_HIPL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'GTCAGTCA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #7 '7' '143_2_ZIL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CGAATACG'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #8 '8' '145_2_HIPL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TCTAGGAG'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #9 '9' '143_1_HIPL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CGCAACTA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #10 '10' '144_5_Hyp_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CGTATCTC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #11 '11' '144_2_ZIL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'GTACACCT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #12 '12' '143_5_Hyp_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CGGCATTA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #13 '13' '143_3_SCL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TCGTCTGA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #14 '14' '143_5_SCL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'AGCCTATC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #15 '15' '144_4_HIPL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CTGTACCA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #16 '16' '142_4_SCL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'AGACCTTG'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #17 '17' '145_5_Hyp_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'AGGATAGC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #18 '18' '143_4_ZIL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CCTTCCAT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #19 '19' '142_2_Hyp_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'GTCCTTGA'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #20 '20' '142_3_ZIL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TGCGTAAC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #21 '21' '142_2_SCL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CACAGACT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #22 '22' '145_3_ICL_fast' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'TTACGTGC'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #23 '23' '145_2_ICL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CCAAGGTT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Sample: #24 '24' '144_2_ICL_chow' [default]
+2023-05-27 00:17:35 [7efce3d947c0] INFO:     Barcode: 'CACGCAAT'
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Read: 1 data read
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Cycles: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Read: 1 index read
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Cycles: 62,63,64,65,66,67,68,69
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Read: 2 data read
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Cycles: 70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130
+2023-05-27 00:17:35 [7efce3d947c0] INFO: Patterned flowcell detected
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2101 (index: 0, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2102 (index: 1, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2103 (index: 2, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2104 (index: 3, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2105 (index: 4, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2106 (index: 5, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2107 (index: 6, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2108 (index: 7, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2109 (index: 8, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2110 (index: 9, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2111 (index: 10, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2112 (index: 11, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2113 (index: 12, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2114 (index: 13, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2115 (index: 14, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2116 (index: 15, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2117 (index: 16, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2118 (index: 17, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2119 (index: 18, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2120 (index: 19, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2121 (index: 20, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2122 (index: 21, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2123 (index: 22, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2124 (index: 23, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2125 (index: 24, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2126 (index: 25, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2127 (index: 26, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2128 (index: 27, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2129 (index: 28, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2130 (index: 29, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2131 (index: 30, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2132 (index: 31, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2133 (index: 32, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2134 (index: 33, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2135 (index: 34, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2136 (index: 35, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2137 (index: 36, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2138 (index: 37, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2139 (index: 38, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2140 (index: 39, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2141 (index: 40, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2142 (index: 41, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2143 (index: 42, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2144 (index: 43, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2145 (index: 44, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2146 (index: 45, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2147 (index: 46, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2148 (index: 47, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2149 (index: 48, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2150 (index: 49, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2151 (index: 50, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2152 (index: 51, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2153 (index: 52, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2154 (index: 53, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2155 (index: 54, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2156 (index: 55, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2157 (index: 56, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2158 (index: 57, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2159 (index: 58, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2160 (index: 59, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2161 (index: 60, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2162 (index: 61, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2163 (index: 62, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2164 (index: 63, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2165 (index: 64, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2166 (index: 65, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2167 (index: 66, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2168 (index: 67, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2169 (index: 68, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2170 (index: 69, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2171 (index: 70, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2172 (index: 71, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2173 (index: 72, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2174 (index: 73, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2175 (index: 74, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2176 (index: 75, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2177 (index: 76, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2178 (index: 77, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2201 (index: 78, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2202 (index: 79, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2203 (index: 80, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2204 (index: 81, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2205 (index: 82, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2206 (index: 83, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2207 (index: 84, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2208 (index: 85, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2209 (index: 86, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2210 (index: 87, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2211 (index: 88, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2212 (index: 89, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2213 (index: 90, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2214 (index: 91, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2215 (index: 92, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2216 (index: 93, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2217 (index: 94, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2218 (index: 95, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2219 (index: 96, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2220 (index: 97, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2221 (index: 98, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2222 (index: 99, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2223 (index: 100, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2224 (index: 101, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2225 (index: 102, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2226 (index: 103, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2227 (index: 104, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2228 (index: 105, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2229 (index: 106, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2230 (index: 107, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2231 (index: 108, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2232 (index: 109, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2233 (index: 110, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2234 (index: 111, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2235 (index: 112, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2236 (index: 113, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2237 (index: 114, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2238 (index: 115, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2239 (index: 116, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2240 (index: 117, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2241 (index: 118, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2242 (index: 119, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2243 (index: 120, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2244 (index: 121, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2245 (index: 122, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2246 (index: 123, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2247 (index: 124, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2248 (index: 125, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2249 (index: 126, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2250 (index: 127, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2251 (index: 128, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2252 (index: 129, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2253 (index: 130, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2254 (index: 131, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2255 (index: 132, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2256 (index: 133, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2257 (index: 134, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2258 (index: 135, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2259 (index: 136, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2260 (index: 137, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2261 (index: 138, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2262 (index: 139, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2263 (index: 140, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2264 (index: 141, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2265 (index: 142, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2266 (index: 143, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2267 (index: 144, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2268 (index: 145, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2269 (index: 146, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2270 (index: 147, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2271 (index: 148, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2272 (index: 149, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2273 (index: 150, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2274 (index: 151, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2275 (index: 152, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2276 (index: 153, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2277 (index: 154, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2278 (index: 155, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2101 (index: 0, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2102 (index: 1, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2103 (index: 2, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2104 (index: 3, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2105 (index: 4, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2106 (index: 5, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2107 (index: 6, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2108 (index: 7, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2109 (index: 8, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2110 (index: 9, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2111 (index: 10, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2112 (index: 11, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2113 (index: 12, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2114 (index: 13, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2115 (index: 14, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2116 (index: 15, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2117 (index: 16, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2118 (index: 17, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2119 (index: 18, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2120 (index: 19, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2121 (index: 20, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2122 (index: 21, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2123 (index: 22, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2124 (index: 23, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2125 (index: 24, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2126 (index: 25, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2127 (index: 26, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2128 (index: 27, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2129 (index: 28, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2130 (index: 29, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2131 (index: 30, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2132 (index: 31, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2133 (index: 32, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2134 (index: 33, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2135 (index: 34, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2136 (index: 35, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2137 (index: 36, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2138 (index: 37, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2139 (index: 38, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2140 (index: 39, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2141 (index: 40, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2142 (index: 41, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2143 (index: 42, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2144 (index: 43, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2145 (index: 44, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2146 (index: 45, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2147 (index: 46, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2148 (index: 47, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2149 (index: 48, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2150 (index: 49, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2151 (index: 50, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2152 (index: 51, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2153 (index: 52, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2154 (index: 53, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2155 (index: 54, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2156 (index: 55, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2157 (index: 56, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2158 (index: 57, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2159 (index: 58, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2160 (index: 59, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2161 (index: 60, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2162 (index: 61, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2163 (index: 62, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2164 (index: 63, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2165 (index: 64, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2166 (index: 65, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2167 (index: 66, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2168 (index: 67, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2169 (index: 68, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2170 (index: 69, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2171 (index: 70, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2172 (index: 71, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2173 (index: 72, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2174 (index: 73, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2175 (index: 74, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2176 (index: 75, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2177 (index: 76, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2178 (index: 77, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2201 (index: 78, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2202 (index: 79, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2203 (index: 80, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2204 (index: 81, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2205 (index: 82, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2206 (index: 83, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2207 (index: 84, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2208 (index: 85, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2209 (index: 86, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2210 (index: 87, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2211 (index: 88, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2212 (index: 89, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2213 (index: 90, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2214 (index: 91, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2215 (index: 92, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2216 (index: 93, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2217 (index: 94, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2218 (index: 95, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2219 (index: 96, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2220 (index: 97, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2221 (index: 98, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2222 (index: 99, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2223 (index: 100, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2224 (index: 101, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2225 (index: 102, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2226 (index: 103, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2227 (index: 104, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2228 (index: 105, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2229 (index: 106, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2230 (index: 107, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2231 (index: 108, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2232 (index: 109, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2233 (index: 110, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2234 (index: 111, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2235 (index: 112, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2236 (index: 113, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2237 (index: 114, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2238 (index: 115, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2239 (index: 116, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2240 (index: 117, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2241 (index: 118, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2242 (index: 119, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2243 (index: 120, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2244 (index: 121, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2245 (index: 122, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2246 (index: 123, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2247 (index: 124, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2248 (index: 125, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2249 (index: 126, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2250 (index: 127, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2251 (index: 128, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2252 (index: 129, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2253 (index: 130, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2254 (index: 131, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2255 (index: 132, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2256 (index: 133, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2257 (index: 134, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2258 (index: 135, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2259 (index: 136, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2260 (index: 137, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2261 (index: 138, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2262 (index: 139, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2263 (index: 140, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2264 (index: 141, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2265 (index: 142, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2266 (index: 143, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2267 (index: 144, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2268 (index: 145, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2269 (index: 146, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2270 (index: 147, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2271 (index: 148, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2272 (index: 149, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2273 (index: 150, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2274 (index: 151, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2275 (index: 152, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2276 (index: 153, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2277 (index: 154, skipped tiles: 0)
+2023-05-27 00:17:35 [7efce3d947c0] INFO:   Tile: 2278 (index: 155, skipped tiles: 0)
+2023-05-27 00:17:36 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Stats"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/Undetermined_S0_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/Undetermined_S0_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_1_HIPL_chow_S1_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_1_HIPL_chow_S1_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_1_Hyp_chow_S2_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_1_Hyp_chow_S2_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_4_SCL_fast_S3_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_4_SCL_fast_S3_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_4_ICL_fast_S4_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_4_ICL_fast_S4_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_4_ZIL_fast_S5_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_4_ZIL_fast_S5_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_4_HIPL_fast_S6_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_4_HIPL_fast_S6_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_2_ZIL_chow_S7_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_2_ZIL_chow_S7_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_2_HIPL_chow_S8_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_2_HIPL_chow_S8_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_1_HIPL_chow_S9_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_1_HIPL_chow_S9_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_5_Hyp_fast_S10_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_5_Hyp_fast_S10_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_2_ZIL_chow_S11_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_2_ZIL_chow_S11_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_5_Hyp_fast_S12_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_5_Hyp_fast_S12_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_3_SCL_fast_S13_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_3_SCL_fast_S13_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_5_SCL_fast_S14_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_5_SCL_fast_S14_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_4_HIPL_fast_S15_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_4_HIPL_fast_S15_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_4_SCL_fast_S16_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_4_SCL_fast_S16_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_5_Hyp_fast_S17_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_5_Hyp_fast_S17_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_4_ZIL_fast_S18_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_4_ZIL_fast_S18_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_2_Hyp_chow_S19_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_2_Hyp_chow_S19_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_3_ZIL_chow_S20_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_3_ZIL_chow_S20_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_2_SCL_chow_S21_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_2_SCL_chow_S21_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_3_ICL_fast_S22_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_3_ICL_fast_S22_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_2_ICL_chow_S23_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_2_ICL_chow_S23_R2_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_2_ICL_chow_S24_R1_001.fastq.gz"
+2023-05-27 00:17:36 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_2_ICL_chow_S24_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/Undetermined_S0_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/Undetermined_S0_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_1_HIPL_chow_S1_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_1_HIPL_chow_S1_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_1_Hyp_chow_S2_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_1_Hyp_chow_S2_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_4_SCL_fast_S3_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_4_SCL_fast_S3_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_4_ICL_fast_S4_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_4_ICL_fast_S4_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_4_ZIL_fast_S5_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_4_ZIL_fast_S5_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_4_HIPL_fast_S6_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_4_HIPL_fast_S6_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_2_ZIL_chow_S7_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_2_ZIL_chow_S7_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_2_HIPL_chow_S8_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_2_HIPL_chow_S8_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_1_HIPL_chow_S9_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_1_HIPL_chow_S9_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_5_Hyp_fast_S10_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_5_Hyp_fast_S10_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_2_ZIL_chow_S11_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_2_ZIL_chow_S11_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_5_Hyp_fast_S12_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_5_Hyp_fast_S12_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_3_SCL_fast_S13_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_3_SCL_fast_S13_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_5_SCL_fast_S14_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_5_SCL_fast_S14_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_4_HIPL_fast_S15_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_4_HIPL_fast_S15_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_4_SCL_fast_S16_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_4_SCL_fast_S16_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_5_Hyp_fast_S17_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_5_Hyp_fast_S17_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_4_ZIL_fast_S18_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/143_4_ZIL_fast_S18_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_2_Hyp_chow_S19_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_2_Hyp_chow_S19_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_3_ZIL_chow_S20_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_3_ZIL_chow_S20_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_2_SCL_chow_S21_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/142_2_SCL_chow_S21_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_3_ICL_fast_S22_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_3_ICL_fast_S22_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_2_ICL_chow_S23_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/145_2_ICL_chow_S23_R2_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_2_ICL_chow_S24_R1_001.fastq.gz"
+2023-05-27 00:22:59 [7efce3d947c0] INFO: Created FASTQ file '"../data/01_fastq/0038/144_2_ICL_chow_S24_R2_001.fastq.gz"
+2023-05-27 00:28:34 [7efce3d947c0] INFO: Created InterOp file '"../data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX/InterOp/IndexMetricsOut.bin"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/all/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/all/all/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/all/all/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_2_Hyp_chow"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_2_Hyp_chow/GTCCTTGA"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_2_Hyp_chow/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_2_Hyp_chow/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_2_SCL_chow"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_2_SCL_chow/CACAGACT"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_2_SCL_chow/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_2_SCL_chow/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_3_ZIL_chow"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_3_ZIL_chow/TGCGTAAC"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_3_ZIL_chow/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_3_ZIL_chow/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_4_HIPL_fast"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_4_HIPL_fast/GTCAGTCA"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_4_HIPL_fast/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_4_HIPL_fast/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_4_SCL_fast"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_4_SCL_fast/AGACCTTG"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_4_SCL_fast/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/142_4_SCL_fast/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_1_HIPL_chow"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_1_HIPL_chow/CGCAACTA"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_1_HIPL_chow/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_1_HIPL_chow/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_2_ZIL_chow"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_2_ZIL_chow/CGAATACG"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_2_ZIL_chow/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_2_ZIL_chow/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_3_SCL_fast"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_3_SCL_fast/TCGTCTGA"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_3_SCL_fast/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_3_SCL_fast/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_4_SCL_fast"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_4_SCL_fast/TCGGATTC"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_4_SCL_fast/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_4_SCL_fast/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_4_ZIL_fast"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_4_ZIL_fast/CCTTCCAT"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_4_ZIL_fast/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_4_ZIL_fast/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_5_Hyp_fast"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_5_Hyp_fast/CGGCATTA"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_5_Hyp_fast/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_5_Hyp_fast/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_5_SCL_fast"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_5_SCL_fast/AGCCTATC"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_5_SCL_fast/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/143_5_SCL_fast/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_1_HIPL_chow"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_1_HIPL_chow/TTACCGAC"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_1_HIPL_chow/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_1_HIPL_chow/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_2_ICL_chow"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_2_ICL_chow/CACGCAAT"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_2_ICL_chow/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_2_ICL_chow/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_2_ZIL_chow"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_2_ZIL_chow/GTACACCT"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_2_ZIL_chow/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_2_ZIL_chow/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_4_HIPL_fast"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_4_HIPL_fast/CTGTACCA"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_4_HIPL_fast/all"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_4_HIPL_fast/unknown"
+2023-05-27 00:32:50 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_4_ICL_fast"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_4_ICL_fast/CAAGGTAC"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_4_ICL_fast/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_4_ICL_fast/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_5_Hyp_fast"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_5_Hyp_fast/CGTATCTC"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_5_Hyp_fast/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/144_5_Hyp_fast/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_1_Hyp_chow"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_1_Hyp_chow/AGTGACCT"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_1_Hyp_chow/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_1_Hyp_chow/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_2_HIPL_chow"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_2_HIPL_chow/TCTAGGAG"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_2_HIPL_chow/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_2_HIPL_chow/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_2_ICL_chow"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_2_ICL_chow/CCAAGGTT"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_2_ICL_chow/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_2_ICL_chow/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_3_ICL_fast"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_3_ICL_fast/TTACGTGC"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_3_ICL_fast/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_3_ICL_fast/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_4_ZIL_fast"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_4_ZIL_fast/TCCTCATG"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_4_ZIL_fast/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_4_ZIL_fast/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_5_Hyp_fast"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_5_Hyp_fast/AGGATAGC"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_5_Hyp_fast/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/145_5_Hyp_fast/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/Undetermined"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/Undetermined/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/Undetermined/unknown"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/all/all"
+2023-05-27 00:32:51 [7efce3d947c0] INFO: creating directory "../data/01_fastq/0038/Reports/html/HCWFLDRXX/default/all/unknown"
+2023-05-27 00:32:56 [7efce3d947c0] Processing completed with 0 errors and 0 warnings.
