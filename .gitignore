@@ -1,3 +1,14 @@
 /.Rprofile_basic
-/.ipynb_checkpoints/*
-/data
+**/.ipynb_checkpoints/**
+01_align/Log.out
+01_align/multiqc/multiqc_report_dmb_all.html
+01_align/multiqc/multiqc_report_dmb_all_data/multiqc_bcl2fastq_bylane.txt
+01_align/multiqc/multiqc_report_dmb_all_data/multiqc_bcl2fastq_bysample.txt
+01_align/multiqc/multiqc_report_dmb_all_data/multiqc_citations.txt
+01_align/multiqc/multiqc_report_dmb_all_data/multiqc_data.json
+01_align/multiqc/multiqc_report_dmb_all_data/multiqc_general_stats.txt
+01_align/multiqc/multiqc_report_dmb_all_data/multiqc_sources.txt
+01_align/multiqc/multiqc_report_dmb_all_data/multiqc_star.txt
+01_align/multiqc/multiqc_report_dmb_all_data/multiqc.log
+03_build_meta_and_counts/meta_0037_0038.ipynb
+04_cleanup/01_preprocess-Copy1.ipynb
