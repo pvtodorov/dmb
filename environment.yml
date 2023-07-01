@@ -1,0 +1,26 @@
+name: dmb
+channels:
+  - bioconda
+  - conda-forge
+  - r
+dependencies:
+  - fortran-compiler
+  - imagemagick
+  - r-irkernel
+  - cairo
+  - cmake
+  - geos
+  - r-base=4.2.2
+  - jupyter
+  - hdf5
+  - gmp
+  - nlopt
+  - libgcc-ng
+  - python=3.10
+  - pip
+  - openssl
+  - libgit2
+variables:
+  PROJECT_DIR: /projects/petar/dmb/
+  R_ENVIRON_USER: /projects/petar/dmb/.Renviron
+  R_PROFILE_USER: /projects/petar/dmb/.Rprofile
