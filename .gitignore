@@ -12,3 +12,6 @@
 01_align/multiqc/multiqc_report_dmb_all_data/multiqc.log
 03_build_meta_and_counts/meta_0037_0038.ipynb
 04_cleanup/01_preprocess-Copy1.ipynb
+**.rds
+**.qs
+**.RData**
