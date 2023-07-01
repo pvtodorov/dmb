@@ -1,0 +1,229 @@
+[2023-05-27 13:57:31,809] multiqc                                            [DEBUG  ]  This is MultiQC v1.14
+[2023-05-27 13:57:31,811] multiqc                                            [DEBUG  ]  Command used: /tools/anaconda/envs/nmq407/dmb/bin/multiqc ../data/00_sequencing_runs/190219_A00642_0010_AHHCHVDMXX ../data/00_sequencing_runs/190830_A00642_0037_BHL3LFDMXX ../data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX ../data/01_fastq/0010 ../data/01_fastq/0037 ../data/01_fastq/0038 ../data/03_qc/fastqc/0010 ../data/03_qc/fastqc/0037 ../data/03_qc/fastqc/0038 ../data/02_aligned/0010 ../data/02_aligned/0037 ../data/02_aligned/0038 -m fastqc -m star -m bcl2fastq --export --outdir multiqc --filename multiqc_report_dmb_all --interactive
+[2023-05-27 13:57:32,216] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.14
+[2023-05-27 13:57:32,217] multiqc                                            [DEBUG  ]  Working dir : /nfsdata/projects/petar/dmb/02_qc
+[2023-05-27 13:57:32,217] multiqc                                            [DEBUG  ]  Template    : default
+[2023-05-27 13:57:32,217] multiqc                                            [DEBUG  ]  Running Python 3.10.11 | packaged by conda-forge | (main, May 10 2023, 18:58:44) [GCC 11.3.0]
+[2023-05-27 13:57:32,217] multiqc                                            [INFO   ]  Only using modules: fastqc, star, bcl2fastq
+[2023-05-27 13:57:32,218] multiqc                                            [DEBUG  ]  Analysing modules: star, fastqc, bcl2fastq
+[2023-05-27 13:57:32,218] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmp4txm8ash
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/00_sequencing_runs/190219_A00642_0010_AHHCHVDMXX
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/00_sequencing_runs/190830_A00642_0037_BHL3LFDMXX
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/00_sequencing_runs/190830_A00642_0038_AHCWFLDRXX
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/01_fastq/0010
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/01_fastq/0037
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/01_fastq/0038
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/03_qc/fastqc/0010
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/03_qc/fastqc/0037
+[2023-05-27 13:57:32,342] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/03_qc/fastqc/0038
+[2023-05-27 13:57:32,343] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/02_aligned/0010
+[2023-05-27 13:57:32,343] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/02_aligned/0037
+[2023-05-27 13:57:32,343] multiqc                                            [INFO   ]  Search path : /nfsdata/projects/petar/dmb/data/02_aligned/0038
+[2023-05-27 13:57:32,343] multiqc                                            [DEBUG  ]  Ignored 297 search patterns as didn't match running modules.
+[2023-05-27 13:58:29,106] multiqc                                            [DEBUG  ]  Summary of files that were skipped by the search: [skipped_no_match: 15067] // [skipped_file_contents_search_errors: 3205] // [skipped_filesize_limit: 1831] // [skipped_ignore_pattern: 946]
+[2023-05-27 13:58:30,166] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.7.1
+[2023-05-27 13:58:30,335] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: Undetermined_S0
+[2023-05-27 13:58:30,372] multiqc.modules.star.star                          [DEBUG  ]  Duplicate sample name found! Overwriting: Undetermined_S0
+[2023-05-27 13:58:30,482] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 12_Fasting_SC_right_S12
+[2023-05-27 13:58:30,589] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 5_Chow_Hip_right_S54
+[2023-05-27 13:58:30,695] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 13_Highfatdiet_Hip_left_S73
+[2023-05-27 13:58:30,803] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 8_Fasting_Hyp_both_S9
+[2023-05-27 13:58:30,909] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 18_Highfatdiet_PFC_right_S48
+[2023-05-27 13:58:31,016] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 2_Chow_SC_left_S43
+[2023-05-27 13:58:31,117] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 6_Chow_Hyp_both_S66
+[2023-05-27 13:58:31,219] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 10_Fasting_Hip_right_S3
+[2023-05-27 13:58:31,321] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 14_Highfatdiet_Hip_left_S50
+[2023-05-27 13:58:31,419] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 10_Fasting_SC_right_S88
+[2023-05-27 13:58:31,520] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 17_Highfatdiet_PFC_right_S89
+[2023-05-27 13:58:31,619] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 16_Highfatdiet_SC_right_S59
+[2023-05-27 13:58:31,716] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 5_Chow_SC_right_S47
+[2023-05-27 13:58:31,809] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 18_Highfatdiet_Hip_right_S53
+[2023-05-27 13:58:31,902] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 10_Fasting_PFC_right_S62
+[2023-05-27 13:58:31,987] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 13_Highfatdiet_SC_left_S10
+[2023-05-27 13:58:32,067] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 11_Fasting_Hip_right_S35
+[2023-05-27 13:58:32,146] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 1_Chow_PFC_left_S1
+[2023-05-27 13:58:32,223] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 15_Highfatdiet_Hyp_both_S18
+[2023-05-27 13:58:32,295] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 5_Chow_PFC_right_S11
+[2023-05-27 13:58:32,366] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 17_Highfatdiet_Hip_right_S33
+[2023-05-27 13:58:32,433] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 3_Chow_Hyp_both_S78
+[2023-05-27 13:58:32,497] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 16_Highfatdiet_Hip_right_S8
+[2023-05-27 13:58:32,558] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 3_Chow_Hip_left_S4
+[2023-05-27 13:58:32,617] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 9_Fasting_SC_left_S20
+[2023-05-27 13:58:32,672] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 12_Fasting_Hyp_both_S23
+[2023-05-27 13:58:32,728] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 16_Highfatdiet_IC_right_S46
+[2023-05-27 13:58:32,783] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 18_Highfatdiet_IC_right_S70
+[2023-05-27 13:58:32,838] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 8_Fasting_Hip_left_S38
+[2023-05-27 13:58:32,893] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 11_Fasting_IC_right_S16
+[2023-05-27 13:58:32,948] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 6_Chow_IC_right_S22
+[2023-05-27 13:58:33,004] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 8_Fasting_PFC_left_S56
+[2023-05-27 13:58:33,058] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 4_Chow_Hip_right_S68
+[2023-05-27 13:58:33,114] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 14_Highfatdiet_IC_left_S58
+[2023-05-27 13:58:33,170] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 4_Chow_SC_right_S65
+[2023-05-27 13:58:33,226] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 1_Chow_SC_left_S21
+[2023-05-27 13:58:33,281] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 4_Chow_IC_right_S69
+[2023-05-27 13:58:33,336] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 7_Fasting_Hip_left_S45
+[2023-05-27 13:58:33,391] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 13_Highfatdiet_Hyp_both_S57
+[2023-05-27 13:58:33,447] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 9_Fasting_PFC_left_S79
+[2023-05-27 13:58:33,502] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 4_Chow_Hyp_both_S25
+[2023-05-27 13:58:33,557] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 2_Chow_IC_left_S14
+[2023-05-27 13:58:33,612] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 5_Chow_IC_right_S15
+[2023-05-27 13:58:33,667] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 16_Highfatdiet_Hyp_both_S85
+[2023-05-27 13:58:33,722] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 18_Highfatdiet_Hyp_both_S13
+[2023-05-27 13:58:33,778] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 10_Fasting_IC_right_S2
+[2023-05-27 13:58:33,834] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 17_Highfatdiet_IC_right_S29
+[2023-05-27 13:58:33,889] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 17_Highfatdiet_SC_right_S64
+[2023-05-27 13:58:33,945] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 5_Chow_Hyp_both_S84
+[2023-05-27 13:58:34,001] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 3_Chow_IC_left_S67
+[2023-05-27 13:58:34,056] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 8_Fasting_IC_left_S32
+[2023-05-27 13:58:34,111] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 11_Fasting_Hyp_both_S30
+[2023-05-27 13:58:34,167] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 16_Highfatdiet_PFC_right_S76
+[2023-05-27 13:58:34,223] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 10_Fasting_Hyp_both_S24
+[2023-05-27 13:58:34,279] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 8_Fasting_SC_left_S60
+[2023-05-27 13:58:34,334] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 15_Highfatdiet_Hip_left_S27
+[2023-05-27 13:58:34,389] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 9_Fasting_Hip_left_S36
+[2023-05-27 13:58:34,444] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 12_Fasting_IC_right_S37
+[2023-05-27 13:58:34,500] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 2_Chow_Hip_left_S71
+[2023-05-27 13:58:34,555] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 6_Chow_SC_right_S31
+[2023-05-27 13:58:34,610] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 7_Fasting_SC_left_S42
+[2023-05-27 13:58:34,666] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 4_Chow_PFC_right_S6
+[2023-05-27 13:58:34,721] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 12_Fasting_PFC_right_S52
+[2023-05-27 13:58:34,776] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 14_Highfatdiet_SC_left_S74
+[2023-05-27 13:58:34,831] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 7_Fasting_PFC_left_S51
+[2023-05-27 13:58:34,886] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 9_Fasting_Hyp_both_S39
+[2023-05-27 13:58:34,942] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 9_Fasting_IC_left_S83
+[2023-05-27 13:58:34,997] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 15_Highfatdiet_PFC_left_S72
+[2023-05-27 13:58:35,052] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 11_Fasting_PFC_right_S82
+[2023-05-27 13:58:35,107] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 13_Highfatdiet_IC_left_S81
+[2023-05-27 13:58:35,162] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 7_Fasting_Hyp_both_S49
+[2023-05-27 13:58:35,218] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 2_Chow_Hyp_both_S44
+[2023-05-27 13:58:35,273] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 1_Chow_IC_left_S5
+[2023-05-27 13:58:35,328] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 2_Chow_PFC_left_S63
+[2023-05-27 13:58:35,383] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 13_Highfatdiet_PFC_left_S7
+[2023-05-27 13:58:35,438] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: Undetermined_S0
+[2023-05-27 13:58:35,493] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 15_Highfatdiet_IC_left_S55
+[2023-05-27 13:58:35,548] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 17_Highfatdiet_Hyp_both_S26
+[2023-05-27 13:58:35,604] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 3_Chow_SC_left_S87
+[2023-05-27 13:58:35,660] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 15_Highfatdiet_SC_left_S41
+[2023-05-27 13:58:35,715] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 6_Chow_PFC_right_S61
+[2023-05-27 13:58:35,772] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 3_Chow_PFC_left_S34
+[2023-05-27 13:58:35,828] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 14_Highfatdiet_PFC_left_S75
+[2023-05-27 13:58:35,883] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 7_Fasting_IC_left_S19
+[2023-05-27 13:58:35,938] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 14_Highfatdiet_Hyp_both_S28
+[2023-05-27 13:58:35,993] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 11_Fasting_SC_right_S40
+[2023-05-27 13:58:36,049] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 12_Fasting_Hip_right_S77
+[2023-05-27 13:58:36,104] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 1_Chow_Hyp_both_S80
+[2023-05-27 13:58:36,159] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 6_Chow_Hip_right_S86
+[2023-05-27 13:58:36,215] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 18_Highfatdiet_SC_right_S90
+[2023-05-27 13:58:36,270] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 1_Chow_Hip_left_S17
+[2023-05-27 13:58:36,327] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_3_HIPL_fast_S45
+[2023-05-27 13:58:36,382] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_3_ZIL_fast_S10
+[2023-05-27 13:58:36,438] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_5_ICL_fast_S31
+[2023-05-27 13:58:36,493] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_1_ZIL_chow_S66
+[2023-05-27 13:58:36,548] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_5_ZIL_fast_S33
+[2023-05-27 13:58:36,603] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_4_Hyp_fast_S16
+[2023-05-27 13:58:36,659] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_2_Hyp_chow_S41
+[2023-05-27 13:58:36,714] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_4_HIPL_fast_S48
+[2023-05-27 13:58:36,769] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_4_ICL_fast_S19
+[2023-05-27 13:58:36,824] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_5_ICL_fast_S36
+[2023-05-27 13:58:36,879] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_3_SCL_fast_S63
+[2023-05-27 13:58:36,935] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_5_HIPL_fast_S56
+[2023-05-27 13:58:36,990] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_2_ICL_chow_S70
+[2023-05-27 13:58:37,045] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_5_SCL_fast_S12
+[2023-05-27 13:58:37,101] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_4_SCL_fast_S43
+[2023-05-27 13:58:37,156] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_1_SCL_chow_S49
+[2023-05-27 13:58:37,211] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_3_ICL_fast_S61
+[2023-05-27 13:58:37,268] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_4_SCL_fast_S30
+[2023-05-27 13:58:37,323] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_2_ZIL_chow_S6
+[2023-05-27 13:58:37,379] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_4_ZIL_fast_S20
+[2023-05-27 13:58:37,435] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_3_Hyp_fast_S57
+[2023-05-27 13:58:37,491] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_5_ZIL_fast_S15
+[2023-05-27 13:58:37,547] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_3_Hyp_chow_S40
+[2023-05-27 13:58:37,602] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_2_HIPL_chow_S3
+[2023-05-27 13:58:37,657] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_3_SCL_chow_S71
+[2023-05-27 13:58:37,712] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_5_HIPL_fast_S35
+[2023-05-27 13:58:37,767] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_3_HIPL_chow_S8
+[2023-05-27 13:58:37,823] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_3_HIPL_fast_S46
+[2023-05-27 13:58:37,879] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_1_ICL_chow_S28
+[2023-05-27 13:58:37,933] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_1_SCL_chow_S60
+[2023-05-27 13:58:37,989] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_2_SCL_chow_S14
+[2023-05-27 13:58:38,045] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_5_Hyp_fast_S69
+[2023-05-27 13:58:38,100] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_1_ZIL_chow_S37
+[2023-05-27 13:58:38,156] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_2_HIPL_chow_S50
+[2023-05-27 13:58:38,211] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_3_Hyp_fast_S23
+[2023-05-27 13:58:38,267] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_1_Hyp_chow_S7
+[2023-05-27 13:58:38,323] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_1_HIPL_chow_S22
+[2023-05-27 13:58:38,378] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_3_ICL_chow_S5
+[2023-05-27 13:58:38,434] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_4_Hyp_fast_S53
+[2023-05-27 13:58:38,490] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_4_Hyp_fast_S29
+[2023-05-27 13:58:38,545] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_5_ZIL_fast_S62
+[2023-05-27 13:58:38,602] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_2_SCL_chow_S34
+[2023-05-27 13:58:38,657] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_1_SCL_chow_S65
+[2023-05-27 13:58:38,712] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_2_ICL_chow_S27
+[2023-05-27 13:58:38,767] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_2_Hyp_chow_S2
+[2023-05-27 13:58:38,822] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_2_ZIL_chow_S11
+[2023-05-27 13:58:38,877] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_3_Hyp_chow_S38
+[2023-05-27 13:58:38,933] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_3_SCL_chow_S26
+[2023-05-27 13:58:38,987] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_1_Hyp_chow_S68
+[2023-05-27 13:58:39,042] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_3_ZIL_fast_S42
+[2023-05-27 13:58:39,098] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_2_Hyp_chow_S25
+[2023-05-27 13:58:39,153] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_2_HIPL_chow_S67
+[2023-05-27 13:58:39,207] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_5_HIPL_fast_S9
+[2023-05-27 13:58:39,262] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_5_HIPL_fast_S58
+[2023-05-27 13:58:39,318] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: Undetermined_S0
+[2023-05-27 13:58:39,373] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_4_HIPL_fast_S17
+[2023-05-27 13:58:39,428] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_3_HIPL_chow_S59
+[2023-05-27 13:58:39,483] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_3_ZIL_chow_S39
+[2023-05-27 13:58:39,538] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_3_ICL_chow_S21
+[2023-05-27 13:58:39,593] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_4_ICL_fast_S51
+[2023-05-27 13:58:39,649] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_5_SCL_fast_S18
+[2023-05-27 13:58:39,704] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_5_ICL_fast_S32
+[2023-05-27 13:58:39,759] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_4_ICL_fast_S24
+[2023-05-27 13:58:39,814] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_5_ZIL_fast_S52
+[2023-05-27 13:58:39,870] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_1_ICL_chow_S44
+[2023-05-27 13:58:39,925] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_4_Hyp_fast_S13
+[2023-05-27 13:58:39,980] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_2_SCL_chow_S4
+[2023-05-27 13:58:40,035] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_1_ICL_chow_S1
+[2023-05-27 13:58:40,090] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_5_SCL_fast_S64
+[2023-05-27 13:58:40,146] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_4_ZIL_fast_S47
+[2023-05-27 13:58:40,201] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_5_ICL_fast_S54
+[2023-05-27 13:58:40,257] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_1_ZIL_chow_S55
+[2023-05-27 13:58:40,312] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_5_Hyp_fast_S10
+[2023-05-27 13:58:40,367] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_5_Hyp_fast_S17
+[2023-05-27 13:58:40,422] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_5_SCL_fast_S14
+[2023-05-27 13:58:40,476] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_2_ICL_chow_S24
+[2023-05-27 13:58:40,530] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_1_HIPL_chow_S9
+[2023-05-27 13:58:40,584] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_4_SCL_fast_S16
+[2023-05-27 13:58:40,638] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_4_HIPL_fast_S15
+[2023-05-27 13:58:40,692] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_4_ICL_fast_S4
+[2023-05-27 13:58:40,747] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_4_ZIL_fast_S18
+[2023-05-27 13:58:40,801] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_3_SCL_fast_S13
+[2023-05-27 13:58:40,855] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_2_SCL_chow_S21
+[2023-05-27 13:58:40,910] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_1_Hyp_chow_S2
+[2023-05-27 13:58:40,965] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_2_ZIL_chow_S11
+[2023-05-27 13:58:41,020] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 144_1_HIPL_chow_S1
+[2023-05-27 13:58:41,075] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_4_ZIL_fast_S5
+[2023-05-27 13:58:41,129] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_2_Hyp_chow_S19
+[2023-05-27 13:58:41,183] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_4_SCL_fast_S3
+[2023-05-27 13:58:41,237] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_3_ICL_fast_S22
+[2023-05-27 13:58:41,291] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_2_HIPL_chow_S8
+[2023-05-27 13:58:41,346] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_2_ZIL_chow_S7
+[2023-05-27 13:58:41,400] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: Undetermined_S0
+[2023-05-27 13:58:41,453] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_3_ZIL_chow_S20
+[2023-05-27 13:58:41,507] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 142_4_HIPL_fast_S6
+[2023-05-27 13:58:41,561] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 145_2_ICL_chow_S23
+[2023-05-27 13:58:41,615] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: 143_5_Hyp_fast_S12
+[2023-05-27 13:58:41,616] multiqc.modules.star.star                          [INFO   ]  Found 186 reports and 186 gene count files
+[2023-05-27 13:59:30,422] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.7.1
+[2023-05-27 13:59:44,683] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'Undetermined_S0_R1_001_fastqc.zip' as already parsed 'Undetermined_S0_R1_001'
+[2023-05-27 13:59:50,089] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'Undetermined_S0_R2_001_fastqc.zip' as already parsed 'Undetermined_S0_R2_001'
+[2023-05-27 13:59:57,620] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'Undetermined_S0_R1_001_fastqc.zip' as already parsed 'Undetermined_S0_R1_001'
+[2023-05-27 13:59:57,907] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'Undetermined_S0_R2_001_fastqc.zip' as already parsed 'Undetermined_S0_R2_001'
+[2023-05-27 13:59:58,567] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 372 reports
+[2023-05-27 14:00:53,398] multiqc.plots.table                                [DEBUG  ]  Plotting beeswarm instead of table, 744 samples
+[2023-05-27 14:00:53,401] multiqc                                            [INFO   ]  Compressing plot data
+[2023-05-27 14:00:58,780] multiqc                                            [INFO   ]  Report      : multiqc/multiqc_report_dmb_all.html
+[2023-05-27 14:00:58,780] multiqc                                            [INFO   ]  Data        : multiqc/multiqc_report_dmb_all_data
+[2023-05-27 14:00:58,780] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp4txm8ash/multiqc_data' to 'multiqc/multiqc_report_dmb_all_data'
+[2023-05-27 14:00:59,009] multiqc                                            [INFO   ]  Plots       : multiqc/multiqc_report_dmb_all_plots
+[2023-05-27 14:00:59,009] multiqc                                            [DEBUG  ]  Moving plots directory from '/tmp/tmp4txm8ash/multiqc_plots' to 'multiqc/multiqc_report_dmb_all_plots'
+[2023-05-27 14:00:59,697] multiqc                                            [INFO   ]  MultiQC complete
