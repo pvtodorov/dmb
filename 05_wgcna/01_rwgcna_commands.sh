@@ -1,0 +1,27 @@
+Rscript /projects/petar/Code/wgcna-toolbox/rwgcna_main_seurat3.0.R \ #get this from https://github.com/perslab/wgcna-toolbox 
+--pathDatExpr /projects/petar/dmb/05_wgcna/vsd_counts.csv \
+--pathMetadata /projects/petar/dmb/05_wgcna/vsd_meta.csv \
+--dirProject /projects/petar/dmb/05_wgcna/wgcna_output/ \
+--prefixData dmb \
+--prefixRun ds4_mcs20_pF \
+--dataType bulk \
+--colIdents region \
+--minGeneCells 10 \
+--minCellClusterSize 50 \
+--featuresUse PCLoading \
+--nFeatures 5000 \
+--nPC 50 \
+--nRepJackStraw 0 \
+--corFnc cor \
+--networkType "c('signed hybrid')" \
+--nRepTOM 100 \
+--consensusQuantile 0.2 \
+--hclustMethod average \
+--minClusterSize "c(20L)" \
+--deepSplit "c(4)" \
+--moduleMergeCutHeight "c(0.2)" \
+--pamStage "c(FALSE)" \
+--kMReassign T \
+--kMSignifFilter T \
+--fuzzyModMembership kME \
+--RAMGbMax 200
