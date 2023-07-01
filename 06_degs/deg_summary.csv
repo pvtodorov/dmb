@@ -1,0 +1,12 @@
+seq_run,region,comparison,n
+0010,HY,HFD.vs.chow,2
+0010,HY,fast.vs.chow,37
+0010,HPF,HFD.vs.chow,129
+0010,HPF,fast.vs.chow,6
+0010,SC,fast.vs.chow,7
+0010,PFC,fast.vs.chow,11
+0037,HY,fast.vs.chow,2728
+0037,HPF,fast.vs.chow,1019
+0037,SC,fast.vs.chow,1612
+0037,IC,fast.vs.chow,1006
+0037,ZI,fast.vs.chow,1387
