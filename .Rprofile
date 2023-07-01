@@ -7,7 +7,9 @@
 options(renv.config.autoloader.enabled = FALSE)
 # renv::load(Sys.getenv("PROJECT_DIR"))
 #
-# if on hogg, load default profile. otherwise, ygg
+# if on cbmrcomp01fl, load default profile. otherwise, ygg
+# (Please change "cbmrcomp01fl" to match the name of your system
+#  can be found using `uname -n` on command line or  `Sys.info()['nodename']` in R)
 if (grepl("cbmrcomp01fl", Sys.info()['nodename'], fixed=TRUE)){
     renv::activate(project = Sys.getenv("PROJECT_DIR"),
                    profile = NULL)
