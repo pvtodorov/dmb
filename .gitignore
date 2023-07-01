@@ -17,3 +17,5 @@
 **.RData**
 05_wgcna/vsd_counts.csv
 **.zip
+renv/activate.R
+renv/settings.dcf
