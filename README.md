@@ -74,4 +74,8 @@ renv::restore()
 
 ## 3. Run through the preprocessing steps and analyses
 
-The repository is structured in numbered directories designed to be run in order. Notebooks and scripts within each are also numbered in the order in which they should be executed. Scripts which are not numbered can be run in any order.
+Users can inspect and perform any step in our analyses, from alignment of FASTQs, to differential gene expression, and gene coexpression module detection.
+
+The repository is structured in numbered directories designed to be run in order. Notebooks and scripts within each are also numbered in the order in which they should be executed. Scripts which are not numbered can be run in any order. 
+
+FASTQ files are not included in this repo due to their size and the user must fetch them manually from GEO (link will be updated on publication). We have included count matricies and metadata in this repo under the `03_build_meta_and_counts` directory.
